@@ -1,3 +1,4 @@
+#!/bin/bash
 # Copyright 2017 Google Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -11,17 +12,18 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#!/bin/bash
 
 # Downloads stories based on URLs in documents.csv into the tmp/ directory.
 
-mkdir -p tmp
-cat documents.csv | cut -d',' -f 1,3,4,5 | tail -n 1572 >id_url.csv
+base=$(dirname "$0")
+
+mkdir -p ${base}/tmp
+cat ${base}/documents.csv | cut -d',' -f 1,3,4,5 | tail -n 1572 > ${base}/id_url.csv
 
 IFS=","
 while read id kind url fs; do
   echo $id
-  file="tmp/${id}.content"
+  file="${base}/tmp/${id}.content"
   if [ ! -f $file ]; then
     size="0"
   else
@@ -35,7 +37,7 @@ while read id kind url fs; do
     if [ $kind == "gutenberg" ]; then
       sleep 2
     fi
-    wget -nc -O $file -o tmp/${id}.log "$url"
+    wget -nc -O $file -o ${base}/tmp/${id}.log "$url"
   fi
   # Some Gutenberg files are downloaded as gzipped text.
   type="$(file -b $file)"
@@ -44,4 +46,4 @@ while read id kind url fs; do
     mv $file "${file}.gz"
     gunzip "${file}.gz"
   fi
-done < id_url.csv
+done < ${base}/id_url.csv
