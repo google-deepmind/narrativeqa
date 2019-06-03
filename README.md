@@ -39,3 +39,82 @@ year = {2018},
 pages = {TBD},
 }
 ```
+
+### Dataset Metadata
+The following table is necessary for this dataset to be indexed by search
+engines such as <a href="https://g.co/datasetsearch">Google Dataset Search</a>.
+<div itemscope itemtype="http://schema.org/Dataset">
+<table>
+  <tr>
+    <th>property</th>
+    <th>value</th>
+  </tr>
+  <tr>
+    <td>name</td>
+    <td><code itemprop="name">The NarrativeQA Reading Comprehension Challenge Dataset</code></td>
+  </tr>
+  <tr>
+    <td>alternateName</td>
+    <td><code itemprop="alternateName">NarrativeQA</code></td>
+  </tr>
+  <tr>
+    <td>url</td>
+    <td><code itemprop="url">https://github.com/deepmind/narrativeqa</code></td>
+  </tr>
+  <tr>
+    <td>sameAs</td>
+    <td><code itemprop="sameAs">https://github.com/deepmind/narrativeqa</code></td>
+  </tr>
+  <tr>
+    <td>description</td>
+    <td><code itemprop="description">This repository contains the NarrativeQA dataset. It includes the list of
+documents with Wikipedia summaries, links to full stories, and questions and answers.</code></td>
+  </tr>
+  <tr>
+    <td>provider</td>
+    <td>
+      <div itemscope itemtype="http://schema.org/Organization" itemprop="provider">
+        <table>
+          <tr>
+            <th>property</th>
+            <th>value</th>
+          </tr>
+          <tr>
+            <td>name</td>
+            <td><code itemprop="name">DeepMind</code></td>
+          </tr>
+          <tr>
+            <td>sameAs</td>
+            <td><code itemprop="sameAs">https://en.wikipedia.org/wiki/DeepMind</code></td>
+          </tr>
+        </table>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>license</td>
+    <td>
+      <div itemscope itemtype="http://schema.org/CreativeWork" itemprop="license">
+        <table>
+          <tr>
+            <th>property</th>
+            <th>value</th>
+          </tr>
+          <tr>
+            <td>name</td>
+            <td><code itemprop="name">Apache License, Version 2.0</code></td>
+          </tr>
+          <tr>
+            <td>url</td>
+            <td><code itemprop="url">https://www.apache.org/licenses/LICENSE-2.0.html</code></td>
+          </tr>
+        </table>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>citation</td>
+    <td><code itemprop="citation">https://identifiers.org/arxiv:1712.07040</code></td>
+  </tr>
+</table>
+</div>
